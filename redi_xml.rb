@@ -25,8 +25,8 @@ def download(url, filename, save_path = 'zips/')
         }
       }
       print "\rDownloading: #{thread[:filename]} %.2f%%\r\n" % thread[:progress].to_f
-    rescue Exception => e
-      puts "=> Exception: '#{e.message}'. Skipping download."
+    rescue Exception => ex
+      puts "=> Exception: '#{ex.message}'. Skipping download."
       return
     end
     puts "Stored download as #{filename}"
